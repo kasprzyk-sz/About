@@ -5,84 +5,160 @@ layout: layouts/base.njk
 templateEngineOverride: njk, md
 ---
 
-{% render '@vf-intro', {"vf_intro_phase": "alpha", "vf_intro_heading": siteConfig.siteInformation.title,
-  "vf_intro_lede": siteConfig.siteInformation.short_description,
-  "vf_intro_text": [
-    "☝️ that also means dynamic building of just the CSS and JS you need."
-  ]
-} %}
-
-<section class="embl-grid embl-grid--has-centered-content">
-  <div>
-    <!-- empty -->
-  </div>
-  <div class="vf-content">
-  {% markdown %}
-
-  ## Quickstart
-
-  ```
-
-      yarn create @visual-framework/vf-eleventy your-new-site-name vf-eleventy   
-
-  ```
-
-  This will install a new [`vf-eleventy`](https://github.com/visual-framework/vf-eleventy/) to a folder named `your-new-site-name`.
-
-  Then follow the onscreen prompts and links below to develop and configure.
-
-  ## Longer install?
-
-  The above too easy or have questions? [Read this guide](https://github.com/visual-framework/vf-eleventy#1-creating-a-new-project-powered-by-vf-eleventy).
-
-  {% endmarkdown %}
-
-  </div>
-</section>
-
-
 <section class="vf-intro | embl-grid embl-grid--has-centered-content">
-
-<div>
-  <!-- empty -->
-</div>
-<div class="vf-content">
-
-## What you get
-
-- the Eleventy static site generator
-- access to the Visual Framework component system
-
-### Component installation
-
-To add a component you can use npm/Yarn or install it manually.
-
-In either case you'll need to re-run `gulp dev` to ensure the component is fully loaded.
-
-- installation: `yarn add @visual-framework/vf-logo`
-- updating: `yarn upgrade-interactive --latest`
-
-### Manual installation for customisation
-
-1. Download a pattern
-2. Copy it to `./src/components/vf-component-name`
-
-### Add your own local component
-
-You can add a custom VF-compatible component to `./src/components` and use it in
-your site.
-
-- `gulp vf-component`
-
-You'll find a `vf-sample` component there, we've used it below:
-
-<div class="vf-box">
-{% verbatim %}
-Code: {% render "@vf-sample", {text: "with some text"} %}
-{% endverbatim %}
-
-Returns: {% render "@vf-sample", {text: "with some text"} %}
-</div>
-
-</div>
+    <div>
+        <!-- empty -->
+    </div>
+    <div>
+        <h1 class="vf-intro__heading">About EMBL</h1>
+        <p class="vf-lede">EMBL is Europe’s leading life sciences laboratory</p>
+        <p class="vf-intro__text">“So what paragraph - EMBL’s impact”
+2000 scientists
+12000 scientific papers
+11 partner insitutions
+EMBL is working for change in the life sciences
+EMBL educates the scientists of tomorrow
+EMBL promotes international cooperation and peace through the life sciences
+</p>
+    </div>
 </section>
+<section class="vf-inlay__content">
+  <main class="vf-inlay__content--full-width">
+    <h2 class="vf-summary__title">Impact</h2>
+    <p class="vf-summary__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique neque sed porta
+      elementum. Pellentesque accumsan convallis imperdiet. Suspendisse vitae dictum leo, sed ultricies enim. Vestibulum
+      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nulla ligula, sagittis vitae
+      purus quis, consectetur pretium leo. Fusce a diam est. Morbi euismod iaculis lacinia. Etiam aliquam facilisis
+      eleifend. Maecenas odio eros, pharetra ac dolor et, suscipit bibendum quam. Sed nec tortor ac nisl consequat
+      sollicitudin quis eu ligula. Vestibulum a rutrum turpis. Donec imperdiet at lorem ut efficitur.</p>
+  </main>
+</section>
+<section class="vf-inlay__content">
+  <main class="vf-inlay__content--full-width">
+    <h2 class="vf-summary__title">Mission</h2>
+    <p class="vf-summary__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique neque sed porta
+      elementum. Pellentesque accumsan convallis imperdiet. Suspendisse vitae dictum leo, sed ultricies enim. Vestibulum
+      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nulla ligula, sagittis vitae
+      purus quis, consectetur pretium leo. Fusce a diam est. Morbi euismod iaculis lacinia. Etiam aliquam facilisis
+      eleifend. Maecenas odio eros, pharetra ac dolor et, suscipit bibendum quam. Sed nec tortor ac nisl consequat
+      sollicitudin quis eu ligula. Vestibulum a rutrum turpis. Donec imperdiet at lorem ut efficitur.</p>
+  </main>
+</section>
+<h2 class="vf-summary__title">Sites</h2>
+<div class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--lg">
+  <div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Heidelberg
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+<div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Hinxton
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+<div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Hamburg
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+    </div>
+<div class="vf-grid | vf-grid__col-3">
+    <div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Rome
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+  <div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Grenoble
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+  <div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Barcelona
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+</div>
+<section class="vf-inlay__content">
+  <main class="vf-inlay__content--full-width">
+    <h2 class="vf-summary__title">Organisation</h2>
+    <p class="vf-summary__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique neque sed porta
+      elementum. Pellentesque accumsan convallis imperdiet. Suspendisse vitae dictum leo, sed ultricies enim. Vestibulum
+      ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nulla ligula, sagittis vitae
+      purus quis, consectetur pretium leo. Fusce a diam est. Morbi euismod iaculis lacinia. Etiam aliquam facilisis
+      eleifend. Maecenas odio eros, pharetra ac dolor et, suscipit bibendum quam. Sed nec tortor ac nisl consequat
+      sollicitudin quis eu ligula. Vestibulum a rutrum turpis. Donec imperdiet at lorem ut efficitur.</p>
+  </main>
+</section>  
+    <h2 class="vf-summary__title">General information</h2>
+    <div class="vf-grid | vf-grid__col-3 | vf-u-margin__bottom--lg">
+  <div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Title
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+<div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Title
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+<div class="vf-card vf-card--topic">
+    <img src="../../assets/vf-card/assets/vf-card-example.png" alt="" class="vf-card__image">
+    <div class="vf-card__content">
+        <h3 class="vf-card__title">
+            Title
+        </h3>
+        <p class="vf-card__text">
+            two lines of text
+        </p>
+    </div>
+</div>
+    </div>
